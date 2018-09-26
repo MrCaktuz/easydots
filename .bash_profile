@@ -101,7 +101,8 @@ dBlue="\e[0;34m";
 lBlue="\e[1;34m";
 dCyan="\e[0;36m";
 lCyan="\e[1;36m";
-green="\e[1;32m";
+dGreen="\e[0;32m";
+lGreen="\e[1;32m";
 dRed="\e[0;31m";
 lRed="\e[1;31m";
 dPink="\e[0;35m";
@@ -119,9 +120,9 @@ fi;
 
 # Highlight the hostname when connected via SSH.
 if [[ "${SSH_TTY}" ]]; then
-	hostStyle="${bold}${dCyan}";
+	hostStyle="${bold}${lBlue}";
 else
-	hostStyle="${dCyan}";
+	hostStyle="${lBlue}";
 fi;
 
 # Set the terminal title and prompt.
@@ -131,8 +132,8 @@ PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${orange}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${orange}\] in ";
-PS1+="\[${lCyan}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${orange}\] on \[${lBlue}\]\" \"\[${yellow}\]\")"; # Git repository details
+PS1+="\[${dGreen}\]\w"; # working directory full path
+PS1+="\$(prompt_git \"\[${orange}\] on \[${lGreen}\]\" \"\[${yellow}\]\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${orange}\]→ \[${reset}\]"; # `$` (and reset color)
 export PS1;
