@@ -168,11 +168,15 @@ alias dc="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
+
 # Projet - Référence Fitness
 alias rf-start='cd ~/Documents/Professionnel/Work/ReferenceFitness/runner/client && yarn install && yarn run build && cd ~/Documents/Professionnel/Work/ReferenceFitness/runner && vagrant destroy -f && vagrant up && cd ~/Documents/Professionnel/Work/ReferenceFitness/runner/client'
 alias rf-end='cd ~/Documents/Professionnel/Work/ReferenceFitness/runner && vagrant halt'
 alias rf-client='cd ~/Documents/Professionnel/Work/ReferenceFitness/runner/client'
 alias rf='cd ~/Documents/Professionnel/Work/ReferenceFitness'
+
+# Projet - Easy Sheets
+alias es='cd ~/project/easySheets'
 
 # Detect which `ls` flavor is in use
 colorflag="-G"
@@ -306,4 +310,13 @@ function o() {
 # Homestead
 function hs() {
     ( cd ~/Homestead && vagrant $* )
+}
+
+# Docker
+function phpd() {
+	( docker-compose exec app php $* )
+}
+
+function docc() {
+	( docker-compose $* )
 }
