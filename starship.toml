@@ -1,0 +1,103 @@
+palette = "material"
+
+format = """\
+
+[](bg:darkest_blue fg:dark_blue)\
+$username\
+[](fg:dark_blue bg:purple)\
+$directory\
+[](fg:purple bg:blue)\
+$git_branch\
+[](fg:blue bg:light_blue)\
+$git_status\
+$git_metrics\
+[](fg:light_blue bg:darkest_blue)\
+$fill\
+
+$jobs\
+[](bg:darkest_blue fg:yellow)\
+$nodejs\
+[](bg:yellow fg:orange)\
+$time\
+[](bg:darkest_blue fg:orange)\
+
+$line_break\
+$line_break\
+[](bg:darkest_blue fg:green)\
+$cmd_duration\
+$character\
+"""
+
+[username]
+format = "[ $user ](bg:dark_blue)"
+show_always = true
+
+[directory]
+format = "[   $path ](bg:purple)"
+truncation_symbol = " "
+truncation_length = 2
+truncate_to_repo = true
+
+[git_branch]
+format = '[  $branch(:$remote_branch) ](bg:blue)'
+
+[git_status]
+format = '[ $ahead_behind ]($style)'
+style = "bg:light_blue"
+conflicted = '󰁄 '
+ahead = ' '
+behind = ' '
+up_to_date =' '
+untracked = ' '
+stashed	= ' '
+modified = ' '
+staged = ' '
+renamed = ' '
+deleted = '✘ '
+
+[git_metrics]
+format = "([+$added ]($added_style))([/-$deleted ]($added_style))"
+added_style = "bg:light_blue"
+deleted_style = "bg:light_blue"
+disabled = false
+
+[fill]
+symbol = ' '
+
+[nodejs]
+format = '[$symbol($version) ]($style)'
+symbol = '  '
+version_format = '${major}'
+style = "bg:yellow"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:orange"
+format = '[ 󱑍 $time ]($style)'
+
+[jobs]
+time_format = "%R" # Hour:Minute Format
+style = "bg:darkest_blue"
+format = '[  ]($style)'
+
+[cmd_duration]
+format = '[$duration ]($style)'
+style = 'fg:darkest_blue bg:green'
+
+[character]
+format = '$symbol'
+success_symbol = '[ ](fg:darkest_blue bg:green)[ ](fg:green bg:darkest_blue)'
+error_symbol = '[](fg:green bg:red)[  ](fg:darkest_blue bg:red)[ ](fg:red bg:darkest_blue)'
+
+[palettes.material]
+orange = "#F58020"
+purple = "#C792EA"
+darkest_blue = "#1B2226"
+dark_blue = "#4F6C76"
+blue = "#82AAFF"
+light_blue = "#89DDF3"
+yellow = "#FAD301"
+green = "#C3E88D"
+red = "#F07178"
+white = "#F6F6F6"

@@ -1,39 +1,20 @@
-#==================================
-#============== Bash ==============
-#==================================
+#======================================
+#=============== Paths ================
+#======================================
+
 export PATH=${PATH}:/Users/mrcaktuz/starship
 
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
-
-# Append to the Bash history file, rather than overwriting it
-shopt -s histappend;
-
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
-
-#=====================================
-#============== Exports ==============
-#=====================================
-
-# Make vscode the default editor.
-export EDITOR='vscode';
-
-# Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
-
-#====================================
-#============== Prompt ==============
-#====================================
+#======================================
+#=============== Prompt ===============
+#======================================
 
 # Use starship to customise terminal
 export STARSHIP_CONFIG="${HOME}/.config/terminal/starship.toml"
-eval "$(starship init bash)"
+eval "$(starship init zsh)"
 
-#=====================================
-#============== Aliases ==============
-#=====================================
+#======================================
+#=============== Aliases ==============
+#======================================
 
 # Navigation
 alias ..="cd .."
