@@ -11,18 +11,11 @@ $git_branch\
 [](fg:blue bg:light_blue)\
 $git_status\
 $git_metrics\
-[](fg:light_blue bg:darkest_blue)\
-$fill\
+[](fg:light_blue bg:darkest_blue)\
 
+$line_break\
+$line_break\
 $jobs\
-[](bg:darkest_blue fg:yellow)\
-$nodejs\
-[](bg:yellow fg:orange)\
-$time\
-[](bg:darkest_blue fg:orange)\
-
-$line_break\
-$line_break\
 [](bg:darkest_blue fg:green)\
 $cmd_duration\
 $character\
@@ -78,7 +71,7 @@ format = '[ 󱑍 $time ]($style)'
 
 [jobs]
 time_format = "%R" # Hour:Minute Format
-style = "bg:darkest_blue"
+style = "bg:darkest_blue fg:yellow"
 format = '[  ]($style)'
 
 [cmd_duration]
