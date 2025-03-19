@@ -2,7 +2,7 @@ palette = "material"
 
 format = """\
 
-[](bg:darkest_blue fg:dark_blue)\
+[](bg:transparent fg:dark_blue)\
 $username\
 [](fg:dark_blue bg:purple)\
 $directory\
@@ -11,12 +11,12 @@ $git_branch\
 [](fg:blue bg:light_blue)\
 $git_status\
 $git_metrics\
-[](fg:light_blue bg:darkest_blue)\
+[](fg:light_blue bg:transparent)\
 
 $line_break\
 $line_break\
 $jobs\
-[](bg:darkest_blue fg:green)\
+[](bg:transparent fg:green)\
 $cmd_duration\
 $character\
 """
@@ -71,22 +71,22 @@ format = '[ 󱑍 $time ]($style)'
 
 [jobs]
 time_format = "%R" # Hour:Minute Format
-style = "bg:darkest_blue fg:yellow"
+style = "bg:transparent fg:yellow"
 format = '[  ]($style)'
 
 [cmd_duration]
 format = '[$duration ]($style)'
-style = 'fg:darkest_blue bg:green'
+style = 'fg:transparent bg:green'
 
 [character]
 format = '$symbol'
-success_symbol = '[ ](fg:darkest_blue bg:green)[ ](fg:green bg:darkest_blue)'
-error_symbol = '[](fg:green bg:red)[  ](fg:darkest_blue bg:red)[ ](fg:red bg:darkest_blue)'
+success_symbol = '[ ](fg:green bg:green)[ ](fg:green bg:transparent)'
+error_symbol = '[](fg:green bg:red)[  ](fg:red bg:red)[ ](fg:red bg:transparent)'
 
 [palettes.material]
 orange = "#F58020"
 purple = "#C792EA"
-darkest_blue = "#1B2226"
+transparent = "transparent"
 dark_blue = "#4F6C76"
 blue = "#82AAFF"
 light_blue = "#89DDF3"
