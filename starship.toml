@@ -70,7 +70,6 @@ style = "bg:orange"
 format = '[ 󱑍 $time ]($style)'
 
 [jobs]
-time_format = "%R" # Hour:Minute Format
 style = "bg:transparent fg:yellow"
 format = '[  ]($style)'
 
